@@ -504,10 +504,10 @@ open class BaseNotificationBanner: UIView {
         // iOS 13 does not allow covering the status bar on non-notch iPhones
         // The banner needs to be moved further down under the status bar in this case
         guard #available(iOS 13.0, *), !NotificationBannerUtilities.isNotchFeaturedIPhone() else {
-            return 0
+            return 10
         }
 
-        return UIApplication.shared.statusBarFrame.height
+        return UIApplication.shared.statusBarFrame.height + 10
     }
 
     /**
